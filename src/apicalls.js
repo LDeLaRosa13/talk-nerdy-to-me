@@ -7,3 +7,7 @@ function getPhrase() {
     return response.json()
   })
 }
+
+export {
+  getPhrase
+}
