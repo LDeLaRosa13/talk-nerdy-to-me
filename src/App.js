@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 function App() {
 const [phraseData, setPhraseData] = useState(null)
-
+const [favePhrase, setFavePhrase] = useState(null)
 
 useEffect(() => {
   getPhrase()
@@ -18,7 +18,7 @@ useEffect(() => {
 
   return (
     <div>
-      <h1>This is my header</h1>
+      {/* <h1>This is my header</h1> */}
       {phraseData ? (
         <p>{phraseData.message}</p>
       ) : (
