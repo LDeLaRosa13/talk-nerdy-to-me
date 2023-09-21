@@ -1,14 +1,18 @@
 import './App.css';
-import {getPhrase} from './apicalls';
+import { getPhrase } from './apicalls';
 import { useState, useEffect } from 'react';
+import  FavoritePhrase  from './FavoritePhrase'
+
 
 function App() {
-const [phraseData, setPhraseData] = useState(null)
-const [favePhrase, setFavePhrase] = useState(null)
+const [phraseData, setPhraseData] = useState('')
+const [favePhrase, setFavePhrase] = useState([])
+
 
 useEffect(() => {
   getPhrase()
   .then(data => {
+    // console.log('data', data)
     setPhraseData(data)
   })
   .catch(error => {
@@ -16,14 +20,28 @@ useEffect(() => {
   })
 }, [])
 
+const addToFavorites = (message) => {
+  const newFavorite = {
+    id: Date.now(),
+    message: message
+  }
+  setFavePhrase([...favePhrase, newFavorite])
+  // console.log('newFave', newFavorite)
+}
+
   return (
     <div>
-      {/* <h1>This is my header</h1> */}
       {phraseData ? (
-        <p>{phraseData.message}</p>
+        <div>
+          <p>{phraseData.message}</p>
+          <button onClick={() => addToFavorites(phraseData.message)}>Add To Favorites</button>
+        </div>
       ) : (
         <p>Loading...</p>
       )}
+      <div>
+        <FavoritePhrase favePhrase={favePhrase}/>
+      </div>
     </div>
   );
 }
