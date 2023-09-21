@@ -1,24 +1,25 @@
 import './App.css';
 import { getPhrase } from './apicalls';
 import { useState, useEffect } from 'react';
-import  FavoritePhrase  from './FavoritePhrase'
+import  FavoriteCard  from './FavoriteCard'
+import FavoritePhrases from './FavoritePhrasesContainer';
 
 
 function App() {
 const [phraseData, setPhraseData] = useState('')
 const [favePhrase, setFavePhrase] = useState([])
+const [nextPhrase, setNextPhrase] = useState(0)
 
 
 useEffect(() => {
   getPhrase()
   .then(data => {
-    // console.log('data', data)
     setPhraseData(data)
   })
   .catch(error => {
     console.log('Error fetching data', error)
   })
-}, [])
+}, [nextPhrase])
 
 const addToFavorites = (message) => {
   const newFavorite = {
@@ -29,7 +30,9 @@ const addToFavorites = (message) => {
   console.log('newFave', newFavorite)
 }
 
-const removeFavorite = (id) => {
+const removeFavorite = (e, id) => {
+  e.preventDefault()
+  console.log(id, favePhrase)
   const updatedFavorites = favePhrase.filter((favorite) => favorite.id !== id)
   setFavePhrase(updatedFavorites)
 }
@@ -37,15 +40,16 @@ const removeFavorite = (id) => {
   return (
     <div>
       {phraseData ? (
-        <div>
+        <div className='phrase-card'>
           <p>{phraseData.message}</p>
           <button onClick={() => addToFavorites(phraseData.message)}>Add To Favorites</button>
+          <button onClick={() => setNextPhrase(nextPhrase + 1)}>Next</button>
         </div>
       ) : (
         <p>Loading...</p>
       )}
       <div>
-        <FavoritePhrase favePhrase={favePhrase} removeFavorite={removeFavorite}/>
+        {favePhrase && <FavoritePhrases favePhrase={favePhrase} removeFavorite={removeFavorite}/>}
       </div>
     </div>
   );

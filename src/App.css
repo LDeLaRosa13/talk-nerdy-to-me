@@ -11,3 +11,21 @@ h1 {
 p {
   color: white;
 }
+
+.phrase-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+button {
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+ background-color: black;
+ color: white;
+}
