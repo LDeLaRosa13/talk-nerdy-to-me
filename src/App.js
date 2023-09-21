@@ -4,11 +4,12 @@ import { useState, useEffect } from 'react';
 
 function App() {
 const [phraseData, setPhraseData] = useState(null)
-const [favePhrase, setFavePhrase] = useState(null)
+const [favePhrase, setFavePhrase] = useState([])
 
 useEffect(() => {
   getPhrase()
   .then(data => {
+    console.log(data)
     setPhraseData(data)
   })
   .catch(error => {
