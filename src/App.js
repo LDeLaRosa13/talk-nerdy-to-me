@@ -8,10 +8,11 @@ function App() {
 const [phraseData, setPhraseData] = useState('')
 const [favePhrase, setFavePhrase] = useState([])
 
+
 useEffect(() => {
   getPhrase()
   .then(data => {
-    console.log(data)
+    // console.log('data', data)
     setPhraseData(data)
   })
   .catch(error => {
@@ -24,7 +25,8 @@ const addToFavorites = (message) => {
     id: Date.now(),
     message: message
   }
-setFavePhrase([...favePhrase, newFavorite])
+  setFavePhrase([...favePhrase, newFavorite])
+  // console.log('newFave', newFavorite)
 }
 
   return (
