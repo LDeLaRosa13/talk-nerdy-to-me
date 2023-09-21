@@ -1,14 +1,15 @@
 import './FavoritePhrase.css'
 
 
-function FavoritePhrase({ favePhrase }) {
+function FavoritePhrase({ favePhrase, removeFavorite }) {
   return(
     <div>
       <h2>Favorite Phrases</h2>
       <ul>
         {favePhrase.map((favorite) => {
           <li key={favorite.id}>
-            {favorite.message}
+            <span>{favorite.message}</span>
+            <button onClick={() => removeFavorite(favorite.id)}>Remove</button>
           </li>
         })}
       </ul>

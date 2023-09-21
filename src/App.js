@@ -26,7 +26,12 @@ const addToFavorites = (message) => {
     message: message
   }
   setFavePhrase([...favePhrase, newFavorite])
-  // console.log('newFave', newFavorite)
+  console.log('newFave', newFavorite)
+}
+
+const removeFavorite = (id) => {
+  const updatedFavorites = favePhrase.filter((favorite) => favorite.id !== id)
+  setFavePhrase(updatedFavorites)
 }
 
   return (
@@ -40,7 +45,7 @@ const addToFavorites = (message) => {
         <p>Loading...</p>
       )}
       <div>
-        <FavoritePhrase favePhrase={favePhrase}/>
+        <FavoritePhrase favePhrase={favePhrase} removeFavorite={removeFavorite}/>
       </div>
     </div>
   );
