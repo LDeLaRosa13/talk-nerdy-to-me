@@ -38,7 +38,7 @@ const removeFavorite = (e, id) => {
 }
 
   return (
-    <div>
+    <div className='mommy'>
       {phraseData ? (
         <div className='phrase-card'>
           <p>{phraseData.message}</p>
@@ -48,7 +48,7 @@ const removeFavorite = (e, id) => {
       ) : (
         <p>Loading...</p>
       )}
-      <div>
+      <div className='mommy'>
         {favePhrase && <FavoritePhrases favePhrase={favePhrase} removeFavorite={removeFavorite}/>}
       </div>
     </div>

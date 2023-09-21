@@ -1,5 +1,5 @@
 import FavoriteCard from "./FavoriteCard";
-// import './FavoritePhrases.css'
+import './FavoritePhrases.css'
 
 function FavoritePhrases ({favePhrase, removeFavorite}) {
   const FavoritePhrasesContainer = favePhrase?.map((phrase) => {
@@ -10,7 +10,7 @@ function FavoritePhrases ({favePhrase, removeFavorite}) {
     />
   }) 
   return (
-    <section>
+    <section className='favorite-phrases-container'>
       {FavoritePhrasesContainer}
     </section>
   )

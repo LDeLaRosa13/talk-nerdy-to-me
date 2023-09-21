@@ -29,3 +29,12 @@ button:hover {
  background-color: black;
  color: white;
 }
+
+.mommy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
