@@ -1,12 +1,19 @@
 import './FavoritePhrase.css'
 
 
-const FavoritePhrase = (message) => {
-  const newFavorite = {
-    id: Date.now(),
-    message: message
-  }
-setFavePhrase([...FavoritePhrase, newFavorite])
+function FavoritePhrase({ favePhrase }) {
+  return(
+    <div>
+      <h2>Favorite Phrases</h2>
+      <ul>
+        {favePhrase.map((favorite) => {
+          <li key={favorite.id}>
+            {favorite.message}
+          </li>
+        })}
+      </ul>
+    </div>
+  )
 }
 
 export default FavoritePhrase

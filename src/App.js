@@ -1,9 +1,11 @@
 import './App.css';
-import {getPhrase} from './apicalls';
+import { getPhrase } from './apicalls';
 import { useState, useEffect } from 'react';
+import  FavoritePhrase  from './FavoritePhrase'
+
 
 function App() {
-const [phraseData, setPhraseData] = useState(null)
+const [phraseData, setPhraseData] = useState('')
 const [favePhrase, setFavePhrase] = useState([])
 
 useEffect(() => {
@@ -17,14 +19,27 @@ useEffect(() => {
   })
 }, [])
 
+const addToFavorites = (message) => {
+  const newFavorite = {
+    id: Date.now(),
+    message: message
+  }
+setFavePhrase([...favePhrase, newFavorite])
+}
+
   return (
     <div>
-      {/* <h1>This is my header</h1> */}
       {phraseData ? (
-        <p>{phraseData.message}</p>
+        <div>
+          <p>{phraseData.message}</p>
+          <button onClick={() => addToFavorites(phraseData.message)}>Add To Favorites</button>
+        </div>
       ) : (
         <p>Loading...</p>
       )}
+      <div>
+        <FavoritePhrase favePhrase={favePhrase}/>
+      </div>
     </div>
   );
 }
