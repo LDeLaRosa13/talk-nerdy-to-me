@@ -1,0 +1,10 @@
+.favorite-phrases-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(251, 248, 248, 0.181);
+  margin-top: 400px;
+  width: 50%;
+}

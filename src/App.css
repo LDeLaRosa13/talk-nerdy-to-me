@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: black; 
   background-image: url('tntm.png');
   background-size: cover;
 }
@@ -10,4 +10,36 @@ h1 {
 
 p {
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.phrase-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+ button {
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+} 
+
+button:hover {
+ background-color: black;
+ color: white;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
 }
