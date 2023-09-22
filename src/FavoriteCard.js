@@ -1,8 +1,8 @@
 import './FavoriteCard.css'
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function FavoriteCard({ phrase, removeFavorite }) {
-  console.log(phrase, "phrase")
   return(
     <div key={phrase.id}>
             <p>{phrase.message}</p>
@@ -12,3 +12,8 @@ function FavoriteCard({ phrase, removeFavorite }) {
 }
 
 export default FavoriteCard
+
+FavoriteCard.propTypes = {
+  phrase: PropTypes.object.isRequired,
+  removeFavorite: PropTypes.func.isRequired
+}
