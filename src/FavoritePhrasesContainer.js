@@ -22,6 +22,6 @@ function FavoritePhrases ({favePhrase, removeFavorite}) {
 export default FavoritePhrases
 
 FavoritePhrases.propTypes = {
-  favePhrase: PropTypes.array,
-  removeFavorite: PropTypes.func
+  favePhrase: PropTypes.array.isRequired,
+  removeFavorite: PropTypes.func.isRequired
 };
