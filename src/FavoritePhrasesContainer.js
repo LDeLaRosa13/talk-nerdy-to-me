@@ -1,6 +1,7 @@
 import FavoriteCard from "./FavoriteCard";
 import './FavoritePhrases.css'
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function FavoritePhrases ({favePhrase, removeFavorite}) {
   const FavoritePhrasesContainer = favePhrase.map((phrase) => {
@@ -19,3 +20,8 @@ function FavoritePhrases ({favePhrase, removeFavorite}) {
 }
 
 export default FavoritePhrases
+
+FavoritePhrases.propTypes = {
+  favePhrase: PropTypes.array.isRequired,
+  removeFavorite: PropTypes.func.isRequired
+};
