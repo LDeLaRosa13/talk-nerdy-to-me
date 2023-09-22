@@ -1,5 +1,5 @@
 import './FavoriteCard.css'
-
+import React from 'react'
 
 function FavoriteCard({ phrase, removeFavorite }) {
   console.log(phrase, "phrase")
