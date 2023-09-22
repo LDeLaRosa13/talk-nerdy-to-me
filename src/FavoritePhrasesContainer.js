@@ -1,8 +1,9 @@
 import FavoriteCard from "./FavoriteCard";
 import './FavoritePhrases.css'
+import React from 'react'
 
 function FavoritePhrases ({favePhrase, removeFavorite}) {
-  const FavoritePhrasesContainer = favePhrase?.map((phrase) => {
+  const FavoritePhrasesContainer = favePhrase.map((phrase) => {
     return <FavoriteCard
       key={phrase.id}
       phrase={phrase}
