@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: black; 
   background-image: url('tntm.png');
   background-size: cover;
 }
@@ -10,6 +10,11 @@ h1 {
 
 p {
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .phrase-card {
@@ -19,18 +24,18 @@ p {
   justify-content: center;
 }
 
-button {
+ button {
   width: 150px;
   border-radius: 10px;
   cursor: pointer;
-}
+} 
 
 button:hover {
  background-color: black;
  color: white;
 }
 
-.mommy {
+.App {
   display: flex;
   flex-direction: column;
   justify-content: center;

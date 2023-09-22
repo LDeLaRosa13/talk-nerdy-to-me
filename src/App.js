@@ -3,7 +3,8 @@ import { getPhrase } from './apicalls';
 import { useState, useEffect } from 'react';
 import  FavoriteCard  from './FavoriteCard'
 import FavoritePhrases from './FavoritePhrasesContainer';
-import {Router, Route} from "react-browser-router";
+// import {Router, Route} from "react-browser-router";
+import NavBar from './NavBar';
 
 
 function App() {
@@ -39,7 +40,9 @@ const removeFavorite = (e, id) => {
 }
 
   return (
-    <div className='mommy'>
+   <div> 
+    <NavBar />
+    <div className='App'>
       {phraseData ? (
         <div className='phrase-card'>
           <p>{phraseData.message}</p>
@@ -49,10 +52,11 @@ const removeFavorite = (e, id) => {
       ) : (
         <p>Loading...</p>
       )}
-      <div className='mommy'>
+      <div className='App'>
         {favePhrase && <FavoritePhrases favePhrase={favePhrase} removeFavorite={removeFavorite}/>}
       </div>
     </div>
+  </div>
   );
 }
 
