@@ -14,9 +14,13 @@ function App() {
     getPhrase()
       .then((data) => {
         setPhraseData(data);
+        console.log(data)
       })
       .catch((error) => {
-        console.log("Error fetching data", error);
+        console.log('errorahhhhh', error)
+        setPhraseData({
+          message: 'Sorry! We could not find any phrases!',
+        });
       });
   }, [nextPhrase]);
 
