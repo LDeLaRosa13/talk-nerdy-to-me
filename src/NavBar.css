@@ -1,26 +1,30 @@
 .button {
-  color: white;
-  margin-right: 20px;
-  padding: 10px 20px;
-  border: 2px solid rgb(0, 0, 0);
-  background-color: transparent;
+  background-color: #eee4e1;
+  margin-left: 0.75em;
+  margin-right: 0.75em;
+  padding: 0.75rem;
+  min-width: fit-content;
   cursor: pointer;
 }
 
  .navbar { 
-  background-color: rgb(0, 0, 0); 
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: relative;
-  height: 5vh;
+  border: 2px solid #d1b296;
+  border-radius: 15px;
+  display: flex;
+  height: 50px;
+  max-width: 100%;
+  overflow-x: auto;
+  background-color: #eee4e1;
 }
 
 .button-container {
-  display: flex;
-  align-items: center;
-  margin-left: 35vw;
-  justify-content: space-between;
+  background-color: #eee4e1;
+  margin-left: 0.75em;
+  margin-right: 0.75em;
+  padding: 0.75rem;
+  min-width: fit-content;
+  cursor: pointer;
 }
 
 

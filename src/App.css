@@ -26,12 +26,15 @@ p {
 
 .phrase-card {
   display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: center; 
+  flex-direction: column;
+  justify-content: space-between; 
   margin-top: 200px;
-  margin-left: 200px;
-  margin-right: 20px
+  border: 2px solid #d1b296;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+  color: #000;
+  height: 250px;
+  padding: 20px;
 }
 
 .phrase {
