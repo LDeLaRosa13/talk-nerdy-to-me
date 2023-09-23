@@ -50,11 +50,11 @@ function App() {
             <div className="App">
               {phraseData ? (
                 <div className="phrase-card">
-                  <p>{phraseData.message}</p>
-                  <button onClick={() => addToFavorites(phraseData.message)}>
+                  <p className="phrase">{phraseData.message}</p>
+                  <button className="fave-button" onClick={() => addToFavorites(phraseData.message)}>
                     Add To Favorites
                   </button>
-                  <button onClick={() => setNextPhrase(nextPhrase + 1)}>
+                  <button className="next-button" onClick={() => setNextPhrase(nextPhrase + 1)}>
                     Next
                   </button>
                 </div>

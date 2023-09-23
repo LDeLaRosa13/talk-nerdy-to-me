@@ -4,8 +4,8 @@ import React from 'react'
 
 const NavBar = () => {
   return (
-    <div className='navbar' style={{backgroundColor: 'white'}}>
-      <div className='button'>
+    <div className='navbar'>
+      <div className='button-container'>
         <NavLink to='/'>
         <button>Home</button>
         </NavLink>

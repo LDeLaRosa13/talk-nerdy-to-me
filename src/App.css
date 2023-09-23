@@ -1,17 +1,22 @@
 body {
-  background: black; 
-  background-image: url('tntm.png');
-  background-size: contain;
+  /* background-image: url('yellow.jpeg'); */
+   /* background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
+}
+
+.App {
+background-image: url('logotntm.png');
+background-repeat: no-repeat;
+background-position: top;
 }
 
 h1 {
-  color: white;
+  color: rgb(13, 1, 1);
 }
 
 p {
-  color: white;
+  color: rgb(7, 0, 0);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,20 +26,39 @@ p {
 
 .phrase-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
-  justify-content: center;
+  justify-content: center; 
+  margin-top: 200px;
+  margin-left: 200px;
+  margin-right: 20px
 }
 
- button {
-  width: 150px;
+.phrase {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* .fave-button {
+  display: flex;
+  flex-direction: row;
+}
+
+.next-button {
+
+} */
+
+
+button {
+  width: 100px;
   border-radius: 10px;
   cursor: pointer;
-} 
+}
 
 button:hover {
- background-color: black;
- color: white;
+  background-color: black;
+  color: white;
 }
 
 .App {
