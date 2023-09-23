@@ -89,8 +89,8 @@ function App() {
             />
           }
         />
+        <Route path="*" element={<Error error={error} />} />
       </Routes>
-      <Route path="*" element={<Error error={error} />} />
     </div>
   );
 }
