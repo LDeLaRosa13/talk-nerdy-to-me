@@ -4,11 +4,13 @@ import React, { useState, useEffect } from "react";
 import FavoritePhrases from "./FavoritePhrasesContainer";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
+import Error from "./Error";
 
 function App() {
   const [phraseData, setPhraseData] = useState("");
   const [favePhrase, setFavePhrase] = useState([]);
   const [nextPhrase, setNextPhrase] = useState(0);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     getPhrase()
@@ -16,9 +18,9 @@ function App() {
         setPhraseData(data);
       })
       .catch((error) => {
-        console.log('errorahhhhh', error)
+        console.log("errorahhhhh", error);
         setPhraseData({
-          message: 'Sorry! We could not find any phrases!',
+          message: "Sorry! We could not find any phrases!",
         });
       });
   }, [nextPhrase]);
@@ -29,7 +31,7 @@ function App() {
       message: message,
     };
     setFavePhrase([...favePhrase, newFavorite]);
-    setNextPhrase(nextPhrase + 1)
+    setNextPhrase(nextPhrase + 1);
   };
 
   const removeFavorite = (e, id) => {
@@ -52,13 +54,25 @@ function App() {
                 <div className="phrase-card">
                   <p className="phrase">{phraseData.message}</p>
                   <div className="next-fave-container">
-                    <button className="fave-button" onClick={() => addToFavorites(phraseData.message)}>
-                      Add To Favorites<span role='img' aria-label='white heart'>🤍</span>
+                    <button
+                      className="fave-button"
+                      onClick={() => addToFavorites(phraseData.message)}
+                    >
+                      Add To Favorites
+                      <span role="img" aria-label="white heart">
+                        🤍
+                      </span>
                     </button>
-                    <button className="next-button" onClick={() => setNextPhrase(nextPhrase + 1)}>
-                      Next Phrase <span role='img' aria-label='arrow pointing to the right'>→</span>
+                    <button
+                      className="next-button"
+                      onClick={() => setNextPhrase(nextPhrase + 1)}
+                    >
+                      Next Phrase{" "}
+                      <span role="img" aria-label="arrow pointing to the right">
+                        →
+                      </span>
                     </button>
-                  </div> 
+                  </div>
                 </div>
               ) : (
                 <p>Loading...</p>
@@ -76,6 +90,7 @@ function App() {
           }
         />
       </Routes>
+      <Route path="*" element={<Error error={error} />} />
     </div>
   );
 }
