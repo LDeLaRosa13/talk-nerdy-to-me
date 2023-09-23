@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 function FavoriteCard({ phrase, removeFavorite }) {
   return(
-    <div key={phrase.id}>
+    <div className='fave-card' key={phrase.id}>
             <p>{phrase.message}</p>
             <button onClick={(e) => removeFavorite(e, phrase.id)}>Remove</button>
     </div>
