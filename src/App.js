@@ -16,7 +16,6 @@ function App() {
     getPhrase()
       .then((data) => {
         setPhraseData(data);
-        console.log(data);
       })
       .catch((error) => {
         console.log("errorahhhhh", error);

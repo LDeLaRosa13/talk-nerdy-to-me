@@ -1,21 +1,40 @@
+.home-button, .favorite-button {
+  background-color: #eee4e1;
+  padding: 0.75rem;
+  min-width: fit-content;
+  cursor: pointer;
+}
 
  .navbar { 
-  background-color: rgba(255, 255, 255, 0.323);
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: relative;
-  /* margin-bottom: 50% ; */
-  height: 5vh;
+  border: 2px solid #d1b296;
+  border-radius: 15px;
+  display: flex;
+  height: 50px;
+  overflow-x: hidden;
+  background-color: #eee4e1;
+  position:relative;
 }
 
-.button {
+.button-container {
   display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  top: 10px;
-  right: 2vw;
-  color: white;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
   align-items: center;
-  /* justify-content: space-around; */
+  background-color: #eee4e1;
+  margin-left: 0.75em;
+  margin-right: 0.75em;
+  padding: 0.75rem;
+  min-width: fit-content;
+  cursor: pointer;
 }
+
+
+@media screen and (max-width: 865px) {
+  .navbar,
+  .home-button,
+  .favorite-button {
+   position: static
+  }
+ }

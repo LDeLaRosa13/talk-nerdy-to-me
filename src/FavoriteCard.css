@@ -1,0 +1,43 @@
+.fave-phrases-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.fave-card-container {
+  display: flex;
+  width: 100vw;
+}
+
+
+.fave-card {
+  justify-content: center;
+  border: 2px solid #d1b296;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+  height: 100px;
+  width: 100rem;
+  padding: 40px;
+  margin-top: 1rem;
+  overflow: hidden;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+/* p {
+
+} */
+
+button {
+  background-color: #eee4e1;
+  margin-left: 0.75em;
+  margin-right: 0.75em;
+  padding: 0.75rem;
+  min-width: fit-content;
+  cursor: pointer;
+  height: 50px;
+  max-width: fit-content; 
+}
