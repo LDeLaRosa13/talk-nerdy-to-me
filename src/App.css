@@ -1,18 +1,13 @@
-body {
-  /* background-image: url('yellow.jpeg'); */
-   /* background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center; */
-}
-
 .App {
-background-image: url('logotntm.png');
-background-repeat: no-repeat;
-background-position: top;
-}
-
-h1 {
-  color: rgb(13, 1, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  background-image: url('logotntm.png');
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 p {
@@ -32,7 +27,6 @@ p {
   border: 2px solid #d1b296;
   border-radius: 10px;
   box-shadow: 0 0 6px rgba(0, 0, 0, .2);
-  color: #000;
   height: 250px;
   padding: 20px;
 }
@@ -43,32 +37,23 @@ p {
   flex-direction: row;
 }
 
-/* .fave-button {
-  display: flex;
-  flex-direction: row;
+ .fave-button, .next-button {
+  background-color: #eee4e1;
+  margin-left: 0.75em;
+  margin-right: 0.75em;
+  padding: 0.75rem;
+  min-width: fit-content;
+  cursor: pointer;
 }
-
-.next-button {
-
-} */
-
 
 button {
   width: 100px;
   border-radius: 10px;
   cursor: pointer;
-}
+} 
 
 button:hover {
   background-color: black;
   color: white;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  width: 100%;
-}

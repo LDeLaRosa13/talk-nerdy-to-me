@@ -1,7 +1,5 @@
-.button {
+.home-button, .favorite-button {
   background-color: #eee4e1;
-  margin-left: 0.75em;
-  margin-right: 0.75em;
   padding: 0.75rem;
   min-width: fit-content;
   cursor: pointer;
@@ -13,12 +11,17 @@
   border-radius: 15px;
   display: flex;
   height: 50px;
-  max-width: 100%;
-  overflow-x: auto;
+  overflow-x: hidden;
   background-color: #eee4e1;
+  position:relative;
 }
 
 .button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center;
   background-color: #eee4e1;
   margin-left: 0.75em;
   margin-right: 0.75em;
@@ -28,8 +31,10 @@
 }
 
 
-.button:hover {
-  background-color: white;
-  color: black;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+@media screen and (max-width: 865px) {
+  .navbar,
+  .home-button,
+  .favorite-button {
+   position: static
+  }
+ }
