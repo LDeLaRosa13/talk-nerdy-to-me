@@ -23,6 +23,8 @@
   overflow: hidden;
   margin-left: 10rem;
   margin-right: 10rem;
+  overflow-y: scroll;
+  overflow-x: scroll;
 }
 
 /* p {
