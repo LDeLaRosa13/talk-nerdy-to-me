@@ -6,7 +6,8 @@ Introducing Talk Nerdy To Me, a revolutionary new application custom made for an
 2. After cloning this repo down, `cd` into the project and run `npm install`
 3. Once the installation is done, you can now run `npm start` to run the application in your web browser
 OR...
-Click this [link]() to visit the app!
+Click this [link](talk-nerdy-to-me-8u1q.vercel.app
+) to visit the app!
 ## PREVIEW OF APPLICATION
 
 
