@@ -7,7 +7,6 @@ const Error = ({ error }) => {
     <section className="error">
       <h2>{error}</h2>
       <Link to="/">
-        <button className="error-button">Retry</button>
         <button className="error-button">Oops! Retry!</button>
       </Link>
     </section>
