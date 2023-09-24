@@ -67,7 +67,19 @@ describe("template spec", () => {
     cy.get("button")
       .contains("Next")
       .click();
-      cy.wait('@fail')
+    cy.wait("@fail");
     cy.get("p").should("contain", "Sorry! We could not find any phrases");
+  });
+  it("should display error button when visiting a wild url", () => {
+    cy.intercept("GET", "https://techy-api.vercel.app/api/json", {
+      statusCode: 404,
+    })
+      .visit("http://localhost:3000/nonsense")
+      .url()
+      .should("eq", "http://localhost:3000/nonsense")
+      .get(".error-button")
+      .click()
+      .url()
+      .should("eq", "http://localhost:3000/");
   });
 });
